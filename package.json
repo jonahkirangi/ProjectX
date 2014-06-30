@@ -1,0 +1,10 @@
+{
+  "name": "projectX",
+  "description": "A job search tool",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.0"
+  }
+}
