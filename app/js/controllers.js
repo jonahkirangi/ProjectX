@@ -1,3 +1,5 @@
+'use strict';
+
 var projectXcontrollers = angular.module('projectXcontrollers', []);
 
 projectXcontrollers.controller('JobListCtrl', function($scope){
@@ -7,7 +9,7 @@ projectXcontrollers.controller('JobListCtrl', function($scope){
         job_title: 'Database Analyst',
         company_name: 'Amazon',
         location: 'Seattle',
-        date_applied: 'April 12, 2014'
+        date_applied: 1288323623006
       },
       {
         id: 1,
