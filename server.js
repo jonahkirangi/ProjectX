@@ -2,8 +2,11 @@
 
 var express = require('express');
 var http    = require('http');
+var mongoose = require('mongoose');
 
 var app = express();
+
+var db = mongoose.createConnection('localhost', 'projectx');
 
 app.use(express.static(__dirname + '/app'));
 
