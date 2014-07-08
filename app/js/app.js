@@ -5,8 +5,8 @@ var projectXapp = angular.module('projectXapp', [
   'projectXcontrollers'
 ]);
 
-projectXapp.config(['$routeProvider',
-  function($routeProvider) {
+projectXapp.config(['$routeProvider', '$locationProvider',
+  function($routeProvider, $locationProvider) {
     $routeProvider.
       when('/', {
         templateUrl: 'partials/job-list.html',
@@ -19,4 +19,6 @@ projectXapp.config(['$routeProvider',
       otherwise({
         redirectTo: '/'
       });
+
+    $locationProvider.html5Mode(true);
   }]);
