@@ -1,27 +1,18 @@
 <!doctype html>
-<html>
+<html ng-app='projectXapp'>
 
   <head>
     <meta charset='utf-8'>
     <title>Project X</title>
 
     <script src='bower_components/angular/angular.js'></script>
+    <script src='bower_components/angular-route/angular-route.js'></script>
     <script src='js/app.js'></script>
     <script src='js/controllers.js'></script>
   </head>
 
-  <body ng-app='projectXapp'>
-    <div id='main_content'>
-      <h1>Hello Sky</h1>
-    </div>
-
-    <div id='sub_content' ng-controller='JobListCtrl'>
-      <input type='text' ng-model='searchJobs'>
-      <button ng-click='searchJobs=""'>Show All Jobs</button>
-      <ul>
-        <li ng-repeat='job in jobs | filter:searchJobs | orderBy: "date_applied"'>{{job.date_applied | date:'longDate'}} - {{job.job_title}} at {{job.company_name}}</li>
-      </ul>
-    </div>
+  <body>
+    <div ng-view></div>
   </body>
 
 </html>
