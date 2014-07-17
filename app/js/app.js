@@ -2,6 +2,7 @@
 
 var projectXapp = angular.module('projectXapp', [
   'ngRoute',
+  'ui.bootstrap',
   'projectXcontrollers'
 ]);
 
