@@ -7,7 +7,7 @@ var fs = require('fs');
 
 var app = express();
 
-var db = mongoose.createConnection('localhost', 'projectx');
+// var db = mongoose.createConnection('localhost', 'projectx');
 
 var index;
 fs.readFile(__dirname + '/app/index.html', function(error, content) {
