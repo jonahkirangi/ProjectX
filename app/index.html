@@ -6,29 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Project X</title>
 
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="bower_components/bootstrap-css-only/css/bootstrap.css">
+
+    <!-- Bower Components -->
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+
+    <!-- JavaScript -->
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
-
-    <link rel="stylesheet" href="bower_components/bootstrap-css-only/css/bootstrap.css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
-  <body>
-    <div class="container">
-      <a href="https://github.com/jonahkirangi/ProjectX"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
 
-      <div align=left><a href="/">Home</a></div>
-      <div align=left><a href="/addjob">Add a Job</a></div>
-      <div ng-app="projectXapp" ng-view></div>
+  <body ng-app="projectXapp">
 
+    <header>
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/">Project X</a>
+          </div>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/addjob">Add A Job</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div id="main">
+      <div ng-view></div>
     </div>
+
+    <footer>
+      <div class="container">
+        <p>Desgined by <a href="http://www.jonahkirangi.com">Jonah Kirangi</a></p>
+      </div>
+    </footer>
+
   </body>
 </html>

@@ -1,0 +1,23 @@
+/****************************************
+            Main Content
+****************************************/
+
+#main {
+  padding-top: 50px; }
+
+/****************************************
+            Footer
+****************************************/
+
+footer {
+  border-top: 1px solid #aab1b0;
+  margin-top: 40px; }
+  footer .container {
+    padding-top: 20px;
+    padding-bottom: 10px; }
+  footer p {
+    color: #aab1b0;
+    text-align: center; }
+    footer p a {
+      color: #aab1b0;
+      text-decoration: none; }

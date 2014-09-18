@@ -1,0 +1,11 @@
+<section id='main_title'>
+  <h1>Job List</h1>
+</div>
+
+<div id='sub_content' ng-controller='JobListCtrl'>
+  <input type='text' ng-model='searchJobs'>
+  <button ng-click='searchJobs=""'>Show All Jobs</button>
+  <ul>
+    <li ng-repeat='job in jobs | filter:searchJobs | orderBy: "date_applied"'>{{job.date_applied | date:'longDate'}} - {{job.job_title}} at {{job.company_name}}</li>
+  </ul>
+</section>

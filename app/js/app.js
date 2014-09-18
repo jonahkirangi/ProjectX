@@ -8,18 +8,27 @@ var projectXapp = angular.module('projectXapp', [
 
 projectXapp.config(['$routeProvider', '$locationProvider',
   function($routeProvider, $locationProvider) {
-    $routeProvider.
-      when('/', {
-        templateUrl: 'partials/job-list.html',
+    $routeProvider
+      .when('/', {
+        templateUrl: 'pages/home.html',
         controller: 'JobListCtrl'
-      }).
-      when('/addjob', {
-        templateUrl: 'partials/add-job.html',
+      })
+      .when('/addjob', {
+        templateUrl: 'pages/addjob.html',
         controller: 'JobListCtrl'
-      }).
-      otherwise({
+      })
+      .when('/about', {
+        templateUrl: 'pages/about.html',
+        controller: 'JobListCtrl'
+      })
+      .when('/contact', {
+        templateUrl: 'pages/contact.html',
+        controller: 'JobListCtrl'
+      })
+      .otherwise({
         redirectTo: '/'
       });
 
     $locationProvider.html5Mode(true);
-  }]);
+  }
+]);
