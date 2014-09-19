@@ -21,7 +21,7 @@
 
   <body ng-app="projectXapp">
 
-    <header>
+    <!-- <header>
       <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
           <div class="navbar-header">
@@ -35,9 +35,31 @@
           </ul>
         </div>
       </nav>
+    </header> -->
+
+    <header>
+      <nav class="navbar navbar-default" role="navigation">
+         <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+               data-target="#example-navbar-collapse">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Project X</a>
+         </div>
+         <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/addjob">Add A Job</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+         </div>
+      </nav>
     </header>
 
-    <div id="main">
+    <div id="main_content">
       <div ng-view></div>
     </div>
 
