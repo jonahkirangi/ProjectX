@@ -1,13 +1,15 @@
 <section id='home'>
   <div class="title">
     <h1>Job List</h1>
+    <h4>Search for a Job</h4>
+    <input type='text' ng-model='searchJobs'>
   </div>
-</div>
+</section>
 
-<div id='sub_content' ng-controller='JobListCtrl'>
-  <input type='text' ng-model='searchJobs'>
-  <button ng-click='searchJobs=""'>Show All Jobs</button>
-  <ul>
-    <li ng-repeat='job in jobs | filter:searchJobs | orderBy: "date_applied"'>{{job.date_applied | date:'longDate'}} - {{job.job_title}} at {{job.company_name}}</li>
-  </ul>
+<section id="jobs" ng-controller='JobListCtrl'>
+  <div class="inner_content">
+    <ul>
+      <li ng-repeat='job in jobs | filter:searchJobs | orderBy: "date_applied"'>{{job.date_applied | date:'longDate'}} - {{job.job_title}} at {{job.company_name}}</li>
+    </ul>
+  </div>
 </section>
